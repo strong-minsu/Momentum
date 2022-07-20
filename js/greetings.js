@@ -1,3 +1,4 @@
+// 사용자 이름 받기
 //html에서 emlemt 가져오기
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
