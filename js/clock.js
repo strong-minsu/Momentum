@@ -1,5 +1,5 @@
 // 현재 시간 화면에 보이기
-const clock = document.querySelector("h2#clock");
+const clock = document.querySelector("h1#clock");
 
 // Date를 이용해 현재 시간 저장
 function getClock(){

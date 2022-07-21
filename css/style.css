@@ -1,4 +1,26 @@
+#clock{
+    text-align: center;
+    font-size: xxx-large;
+    font-weight: bolder;
+}
+
 .hidden{
     display: none;
+}
+
+body{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Nanum Gothic Coding', monospace;
+}
+
+#center{
+    height: 900px;
+    position: relative;
+}
+
+#login-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 

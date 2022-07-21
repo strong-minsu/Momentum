@@ -40,7 +40,7 @@ function paintToDo(newTodo){
 function handleToDoSubmit(event){
     event.preventDefault();
     // toDoInput의 value를 복사함 newTodo로
-    const newTodo = toDoInput.value;
+    const newTodo = toDoInput.value + " ";
     toDoInput.value = "";
 
     // todo element 작성시 toDos array에 object로 push
