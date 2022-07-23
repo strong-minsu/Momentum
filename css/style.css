@@ -1,8 +1,4 @@
-#clock{
-    text-align: center;
-    font-size: xxx-large;
-    font-weight: bolder;
-}
+
 
 .hidden{
     display: none;
@@ -11,6 +7,13 @@
 body{
     font-family: 'Nanum Gothic', sans-serif;
     font-family: 'Nanum Gothic Coding', monospace;
+    /* position: relative; */
+}
+
+#clock{
+    text-align: center;
+    font-size: xxx-large;
+    font-weight: bolder;
 }
 
 #center{
@@ -24,3 +27,20 @@ body{
     align-items: center;
 }
 
+#greeting{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#todo-form{
+    margin-left: 300px;
+}
+
+ #todo-list{
+    margin-left: 265px;
+    width: 200px;
+    height: 400px;
+    /* box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.295);
+    background-color: rgba(5, 155, 17, 0.4); */
+} 
