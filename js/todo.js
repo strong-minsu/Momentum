@@ -20,6 +20,12 @@ function deleteToDo(event){
     saveToDo();
 }
 
+// to do element clear
+function clearToDo(event){
+    const li = event.target.parentElement;
+    li.style.textDecoration = "line-through"
+}
+
 // to do element paint
 function paintToDo(newTodo){
     const li = document.createElement("li");
@@ -28,11 +34,16 @@ function paintToDo(newTodo){
     span.innerText = newTodo.text;
 
     const button = document.createElement("button");
-    button.innerText = "✗";
+    button.innerText = "❌";
     button.addEventListener("click", deleteToDo);
+
+    const chackBtn = document.createElement("button");
+    chackBtn.innerText= "✔️"
+    chackBtn.addEventListener("click", clearToDo)
 
     li.appendChild(span);
     li.appendChild(button); 
+    li.appendChild(chackBtn);
     toDoList.appendChild(li);
 }
 
