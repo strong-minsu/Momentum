@@ -39,8 +39,15 @@ body{
 
 #todo-list{
     margin-left: 265px;
-    width: 200px;
+    width: 300px;
     height: 400px;
+    overflow: auto;
     /* box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.295);
     background-color: rgba(5, 155, 17, 0.4); */
+}
+
+#todo-list li span {
+    display: block;
+    width: 280px;
+    line-height: 150%;
 }
