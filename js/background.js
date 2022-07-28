@@ -23,11 +23,11 @@ const chosenLoginImage = loginImages[landomNumber];
 
 // background이미지로 추가하기
 if(loginSituation.classList.contains("hidden")){
-    console.log(loginSituation.classList.contains("hidden"));
+    // console.log(loginSituation.classList.contains("hidden"));
     centerImage.style.background = `url(img/${chosenLoginImage}) no-repeat top`;
     centerImage.style.backgroundSize = "cover";
 }else{
-    console.log(loginSituation.classList.contains("hidden"));
+    // console.log(loginSituation.classList.contains("hidden"));
     centerImage.style.background = `url(img/${chosenImage}) no-repeat top`;
     centerImage.style.backgroundSize = "cover";
 }

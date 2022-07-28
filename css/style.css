@@ -46,8 +46,25 @@ body{
     background-color: rgba(5, 155, 17, 0.4); */
 }
 
+/* 한줄에 다 보이긴 함*/
+/* #todo-list li{
+    display: flex;
+} */
+
 #todo-list li span {
     display: block;
     width: 280px;
     line-height: 150%;
+}
+
+td{
+    width: 50px;
+    height: 60px;
+    text-align: center;
+    border: 2px solid #000;
+    border-radius : 8px;
+}
+#calender-yearmonth{
+    font-size: larger;
+    width: 250px;
 }
