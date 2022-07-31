@@ -6,6 +6,7 @@ const greeting  = document.querySelector("#greeting");
 const todoForm = document.querySelector("#todo-form");
 const logoutForm = document.querySelector("#logout-form");
 const calendarTable = document.querySelector("table");
+const hr = document.querySelector("hr");
 
 const quote_form = document.querySelector("#quote");
 const weather = document.querySelector("#weather");
@@ -20,6 +21,7 @@ function addHIDDEN(){
     quote_form.classList.add(HIDDEN_CLASSNAME);
     weather.classList.add(HIDDEN_CLASSNAME);
     calendarTable.classList.add(HIDDEN_CLASSNAME);
+    hr.classList.add(HIDDEN_CLASSNAME);
 }
 // todoForm, quote, weather hidden 클래스 삭제
 // 로그인 했을 때 (이름 입력 submit) hidden클래스를 삭제 요소 화면에 display
@@ -28,6 +30,7 @@ function remoceHIDDEM(){
     quote_form.classList.remove(HIDDEN_CLASSNAME);
     weather.classList.remove(HIDDEN_CLASSNAME);
     calendarTable.classList.remove(HIDDEN_CLASSNAME);
+    hr.classList.remove(HIDDEN_CLASSNAME);
 }
 
 function onLoginSubmit(event){

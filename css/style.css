@@ -10,7 +10,6 @@ body{
     /* position: relative; */
 }
 
-
 #clock{
     text-align: center;
     font-size: xxx-large;
@@ -49,10 +48,9 @@ body{
 }
 .calendarTodolist #todo-list{
     margin-left: 0;
-    width: 270px;
+    width: 200px;
     height: 400px;
     overflow: auto;
-    /* box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.295); */
     background-color: transparent;
 }
 
@@ -74,7 +72,7 @@ body{
 
 .calendarTodolist table{
     position: relative;
-    left: 20px;
+    left: 10px;
 }
 
 td{
@@ -84,7 +82,14 @@ td{
     border: 2px solid #000;
     border-radius : 8px;
 }
-/* #calender-yearmonth{
-    font-size: larger;
-    width: 250px;
-} */
+
+#center #weather{
+    height: 50px;
+    font-size: large;
+    font-weight: 700;
+}
+#center #quote{
+    height: 50px;
+    font-size: large;
+    font-weight: 700;
+}
