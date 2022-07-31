@@ -10,6 +10,7 @@ body{
     /* position: relative; */
 }
 
+
 #clock{
     text-align: center;
     font-size: xxx-large;
@@ -17,8 +18,7 @@ body{
 }
 
 #center{
-    height: 900px;
-    position: relative;
+    z-index: 1;
 }
 
 #login-form{
@@ -32,39 +32,59 @@ body{
     justify-content: center;
     align-items: center;
 }
-
-#todo-form{
-    margin-left: 300px;
+.calendarTodolist{
+    display: flex;
+    width: 900px;
+    height: 500px;
 }
-
-#todo-list{
-    margin-left: 265px;
+.calendarTodolist #todo-form{
     width: 300px;
+    height: 490px;
+    /* margin-left: 65px; */
+    position: absolute;
+}
+.calendarTodolist #todo-form input{
+    display: block;
+    position: relative;
+}
+.calendarTodolist #todo-list{
+    margin-left: 0;
+    width: 270px;
     height: 400px;
     overflow: auto;
-    /* box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.295);
-    background-color: rgba(5, 155, 17, 0.4); */
+    /* box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.295); */
+    background-color: transparent;
 }
 
-/* 한줄에 다 보이긴 함*/
-/* #todo-list li{
-    display: flex;
-} */
-
-#todo-list li span {
+.calendarTodolist #todo-list li{
+    position: relative;
+    top: 20px;
+    /* display: flex; */
+}
+.calendarTodolist #todo-list li span {
+    position: relative;
     display: block;
-    width: 280px;
+    margin-right: 40%;
     line-height: 150%;
+}
+.calendarTodolist #todo-list li button {
+    position: relative;
+    right: 20px;
+}
+
+.calendarTodolist table{
+    position: relative;
+    left: 20px;
 }
 
 td{
-    width: 50px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     text-align: center;
     border: 2px solid #000;
     border-radius : 8px;
 }
-#calender-yearmonth{
+/* #calender-yearmonth{
     font-size: larger;
     width: 250px;
-}
+} */
