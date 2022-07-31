@@ -1,21 +1,41 @@
-const day = document.querySelector("h3#calendar");
-const calendarYearMonth = document.querySelector("#calender-yearmonth");
-const date = new Date();
-const nowDate = date.getDate();
-const nowMonth = date.getMonth() + 1
-const nowYear = date.getFullYear();
-// year은 2022 -> string사이즈 4  -> 즉 padStart 4부터 적용
-day.innerText = 
-`${String(nowYear).padStart(4, "0")}-${String(nowMonth).padStart(2, "0")}-${String(nowDate).padStart(2, "0")}`;
+let today = new Date(); //현재의 날짜
 
-// 윤년 검사
-// let leapYear;
-// if(((nowYear%4===0) && (nowYear%100!=0))|| (nowYear%400===0)){
-//   leapYear = true;
-// }else{
-//   leapYear = false;
-// }
-// console.log(`윤년인가요? = ${leapYear}`);
+todayYear = today.getFullYear();
 
-//  달력에 월-년 출력
-calendarYearMonth.innerText = `${String(nowYear).padStart(4, "0")}-${String(nowMonth).padStart(2, "0")}`;
+todayMonth = today.getMonth() + 1; // 월은 0부터 시작하기때문에 + 1을 해줘야지 해당 달의 월이 나온다.
+		
+today_yearMonth = todayYear + " - " + todayMonth;
+	
+document.getElementById("yearMonth").innerHTML= today_yearMonth;
+
+let firstDate = new Date(today.getFullYear(), today.getMonth(),1);
+let lastDate = new Date(today.getFullYear(), today.getMonth()+1,0);
+let day = firstDate.getDay();
+let calendar = document.getElementById("calendar_table");
+let week = Math.ceil(lastDate.getDate()/7) + 1;
+function buildCalendar(){
+			let leftDays = 7; // setDays 와 반비례 
+			let setDays = 1;// leftDays 와 반비례 
+			for(i = 1; i < week; i++){
+				let row = calendar.insertRow();
+				while(day != 0){
+					row.insertCell().innerHTML = "";
+					day -= 1; 
+					leftDays -= 1;
+				} // 1주
+				let nextMonthDate = 1;
+				while(leftDays != 0){
+					if(setDays > lastDate.getDate()){
+						row.insertCell().innerHTML = nextMonthDate;
+						leftDays -= 1;
+						nextMonthDate += 1;
+					}else{
+						row.insertCell().innerHTML = setDays;
+						setDays +=1;
+						leftDays -= 1;
+					}
+				}
+				leftDays = 7;
+			}
+}
+buildCalendar();
