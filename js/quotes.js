@@ -10,7 +10,7 @@ const quotes = [
         author: "Aladdin",
     },
     {
-        quote: "You can't get what you want just by wishing for it",
+        quote: "You can't get what you want just by wishing for it.",
         author: "The princess and the Frog",
     },
     {
